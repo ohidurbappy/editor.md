@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown Editor</title>
+    <link rel="stylesheet" href="../node_modules/codemirror/lib/codemirror.css">
+    <link rel="stylesheet" href="../node_modules/@toast-ui/editor/dist/toastui-editor.css">
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div id="editor">
+
+    </div>
+    <div>
+        <a style="padding: 8px;cursor: pointer;" onclick="javascript:void(0);" id="about">About</a>
+    </div>
+    
+
+    <!-- <script src="./node_modules/@toast-ui/editor/dist/toastui-editor.js"></script> -->
+    <script src="./lib/toastui-editor-all.min.js"></script>
+    <script>
+        const Editor = toastui.Editor;
+        const editor = new Editor({
+            el: document.querySelector('#editor'),
+            height: '90vh',
+            previewStyle: 'vertical',
+            initialEditType: 'wysiwyg',
+            initialValue: `## Welcome to MDE`
+        });
+
+        // editor.getHtml();
+    </script>
+    <script src="./view.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
